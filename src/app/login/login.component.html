@@ -1,0 +1,19 @@
+
+<div class="login">
+    <h2>Đăng nhập</h2>
+    <form (ngSubmit)="onSubmit()" class="p-fluid">
+      <div class="p-field">
+        <label for="user">User:</label>
+        <input id="user" type="text" [(ngModel)]="user" name="user" pInputText required maxlength="10">
+      </div>
+      <div class="p-field">
+        <label for="password">Password:</label>
+        <input id="password" type="password" [(ngModel)]="password" name="password" pPassword required maxlength="15">
+      </div>
+      <button type="submit" pButton label="Đăng nhập"></button>
+    </form>
+    <div *ngIf="loginFailed" class="error-message">
+      User hoặc password không đúng
+    </div>
+  </div>
+  
