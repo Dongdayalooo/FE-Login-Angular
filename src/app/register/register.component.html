@@ -1,0 +1,45 @@
+<div class="register">
+    <h2>Đăng ký</h2>
+    <form (ngSubmit)="onSubmit()" class="p-fluid">
+      <div class="p-field">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text" [(ngModel)]="user.lastName" name="lastName" pInputText required>
+      </div>
+      <div class="p-field">
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" [(ngModel)]="user.firstName" name="firstName" pInputText required>
+      </div>
+      <div class="p-field">
+        <label for="age">Tuổi:</label>
+        <input id="age" type="text" [(ngModel)]="user.age" name="age" pInputText [min]="0" [max]="120"  required>
+
+      </div>
+      
+      <div class="p-field">
+        <label for="address">Địa chỉ:</label>
+        <input id="address" type="text" [(ngModel)]="user.address" name="address" pInputText required>
+      </div>
+      <div class="p-field">
+        <label for="phoneNumber">Số điện thoại:</label>
+        <p-inputNumber id="phoneNumber" [(ngModel)]="user.phoneNumber" name="phoneNumber"></p-inputNumber>
+      </div>
+      <div class="p-field">
+        <label for="email">Email:</label>
+        <input id="email" type="email" [(ngModel)]="user.email" name="email" pInputText required>
+      </div>
+      <div class="p-field">
+        <label for="password">Password:</label>
+        <input id="password" type="password" [(ngModel)]="user.password" name="password" pPassword required>
+      </div>
+      <div class="p-field">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input id="confirmPassword" type="password" [(ngModel)]="user.confirmPassword" name="confirmPassword" pPassword required>
+      </div>
+      <button type="submit" pButton label="Đăng ký"></button>
+    </form>
+    <div class="p-field">
+      <p>Quay lại <a routerLink="">Login</a></p>
+    </div>
+    
+  </div>
+  

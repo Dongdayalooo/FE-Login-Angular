@@ -11,14 +11,17 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDetailComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     CommonModule,
     BrowserAnimationsModule,
+    InputNumberModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
